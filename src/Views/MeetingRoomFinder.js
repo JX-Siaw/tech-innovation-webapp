@@ -9,7 +9,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 const style = {
   background: "white",
-  borderRadius: 9,
+  borderRadius: "10px",
   border: 0,
   color: "black",
   height: 48,
@@ -27,11 +27,11 @@ class MeetingRoomFinder extends Component {
     filter: "",
     data: [
       {
-        name: "Neha Wadha",
+        name: "Neha Wadhwa",
         location: "Home"
       },
       {
-        name: "Jolene Farrel",
+        name: "Jolene Farrell",
         location: "Home"
       },
       {
@@ -79,7 +79,7 @@ class MeetingRoomFinder extends Component {
         location: "OnSite"
       },
       {
-        name: "Shivani",
+        name: "Shivani Sangar",
         location: "Leave"
       },
       {
