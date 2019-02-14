@@ -18,6 +18,8 @@ const styles = theme => ({
 function bubble(props) {
   const onMouseOver = event => {
     const el = event.target;
+    console.log(el);
+    console.log("MouseOver" + el.id);
     el.style.backgroundColor = props.hovercolour;
     el.style.opacity = 0.9;
     el.style.height = "" + parseInt(props.radius) * 1.1 + "%";
@@ -26,9 +28,11 @@ function bubble(props) {
 
   const onMouseOut = event => {
     const el = event.target;
+    console.log("MouseOut" + el.id);
     el.style.backgroundColor = props.colour;
     el.style.height = props.radius;
     el.style.width = props.radius;
+    el.style.opacity = props.opacity;
   };
 
   return (
