@@ -37,20 +37,12 @@ const sideDrawer = () => {
             <ListItemText primary="Team Member Finder" />
           </ListItem>
         </NavLink>
-        <NavLink to="/DataVis">
+        <NavLink to="/Team-Data">
           <ListItem button key="DataVis">
             <ListItemIcon>
               <GraphIcon />
             </ListItemIcon>
-            <ListItemText primary="Data Visualisation" />
-          </ListItem>
-        </NavLink>
-        <NavLink to="/inoffice">
-          <ListItem button key="In Office">
-            <ListItemIcon>
-              <WorkIcon />
-            </ListItemIcon>
-            <ListItemText primary="In Office" />
+            <ListItemText primary="Team Data" />
           </ListItem>
         </NavLink>
         <NavLink to="/options">
@@ -59,30 +51,6 @@ const sideDrawer = () => {
               <MenuIcon />
             </ListItemIcon>
             <ListItemText primary="Options" />
-          </ListItem>
-        </NavLink>
-        <NavLink to="/onsite">
-          <ListItem button key="On Site">
-            <ListItemIcon>
-              <DirectionIcon />
-            </ListItemIcon>
-            <ListItemText primary="On Site" />
-          </ListItem>
-        </NavLink>
-        <NavLink to="/locations">
-          <ListItem button key="Locations">
-            <ListItemIcon>
-              <LocationIcon />
-            </ListItemIcon>
-            <ListItemText primary="Locations" />
-          </ListItem>
-        </NavLink>
-        <NavLink to="/find">
-          <ListItem button key="Find">
-            <ListItemIcon>
-              <SearchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Find" />
           </ListItem>
         </NavLink>
       </List>

@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: TelstraAkkurat;
   src: url("./Assets/Fonts/akkurat-light.woff");
 }
@@ -8,8 +8,10 @@
   src: url("./Assets/Fonts/gravur.woff");
 }
 
+*/
+
 .App {
-  font-family: TelstraAkkurat;
+  font-family: Calibri;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -22,16 +24,16 @@
 h1 {
   color: white;
   padding: 0;
-  font-family: TelstraAkkurat;
+  font-family: Calibri;
   font-size: 2.5em;
 }
 
 span {
-  font-family: gravur;
+  font-family: Calibri;
 }
 
 p1 {
-  font-family: gravur;
+  font-family: Calibri;
   color: white;
   font-size: 30px;
 }

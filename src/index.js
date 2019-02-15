@@ -15,7 +15,6 @@ import OnSite from "./Views/OnSite";
 import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
 import ComponentDemo from "./Views/ComponentDemo";
-import find from "./Views/find";
 import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
 
@@ -61,14 +60,13 @@ class App extends Component {
         />
         <Switch>
           <Route path="/team-member-finder" component={TeamMemberFinder} />
-          <Route path="/DataVis" component={DataVis} />
+          <Route path="/Team-Data" component={DataVis} />
           <Route path="/component-demo" component={ComponentDemo} />
           <Route exact path="/" component={Home} />
           <Route path="/locations" component={Locations} />
           <Route path="/inoffice" component={InOffice} />
           <Route path="/onsite" component={OnSite} />
           <Route path="/options" component={Options} />
-          <Route path="/find" component={find} />
           <Route path="/DefaultLocation" component={DefaultLocation} />
           <Route path="/SetDefaultLocation" component={SetDefaultLocation} />
         </Switch>
