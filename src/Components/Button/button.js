@@ -54,6 +54,8 @@ function CustomizedButtons(props) {
       <Button
         variant="contained"
         color="default"
+        component={props.component}
+        to={props.to}
         disableRipple
         style={{
           minWidth: 200,
