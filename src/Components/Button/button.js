@@ -53,7 +53,7 @@ function CustomizedButtons(props) {
     <div>
       <Button
         variant="contained"
-        color="none"
+        color="default"
         disableRipple
         style={{
           minWidth: 200,

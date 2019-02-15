@@ -23,7 +23,7 @@ const divStyle = {
   alignItems: "center"
 };
 
-class MeetingRoomFinder extends Component {
+class TeamMemberFinder extends Component {
   state = {
     filter: "",
     data: [
@@ -223,4 +223,4 @@ class MeetingRoomFinder extends Component {
   }
 }
 
-export default MeetingRoomFinder;
+export default TeamMemberFinder;

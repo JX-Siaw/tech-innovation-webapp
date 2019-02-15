@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { Route, Switch, BrowserRouter, NavLink } from "react-router-dom";
+import { Route, Switch, Router, NavLink } from "react-router-dom";
+import createBrowserHistory from 'history/createBrowserHistory';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 
 import NavBar from "./Components//NavBar/navbar";
 import SideDrawer from "./Components/SideDrawer/sidedrawer";
 import Home from "./Views/Home";
-import MeetingRoomFinder from "./Views/MeetingRoomFinder";
+import TeamMemberFinder from "./Views/TeamMemberFinder";
 import Locations from "./Views/Locations";
 import InOffice from "./Views/InOffice";
 import OnSite from "./Views/OnSite";
@@ -19,7 +20,9 @@ import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
 
 import "./styles.css";
-// Hello
+
+const history = createBrowserHistory();
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -54,11 +57,10 @@ class App extends Component {
         <NavBar
           onClick={() => {
             this.setState({ drawerIsOpen: true });
-            console.log(this.state.drawerIsOpen);
           }}
         />
         <Switch>
-          <Route path="/meeting-room-finder" component={MeetingRoomFinder} />
+          <Route path="/team-member-finder" component={TeamMemberFinder} />
           <Route path="/DataVis" component={DataVis} />
           <Route path="/component-demo" component={ComponentDemo} />
           <Route exact path="/" component={Home} />
@@ -77,8 +79,8 @@ class App extends Component {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <BrowserRouter>
+  <Router history={history}>
     <App />
-  </BrowserRouter>,
+  </Router>,
   rootElement
 );

@@ -6,7 +6,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import DeskIcon from "@material-ui/icons/DesktopMac";
-import RoomIcon from "@material-ui/icons/MeetingRoom";
+import PeopleIcon from "@material-ui/icons/People";
 import HomeIcon from "@material-ui/icons/Home";
 import WorkIcon from "@material-ui/icons/Work";
 import GraphIcon from "@material-ui/icons/GraphicEq";
@@ -29,12 +29,12 @@ const sideDrawer = () => {
             <ListItemText primary="Home" />
           </ListItem>
         </NavLink>
-        <NavLink to="/meeting-room-finder">
-          <ListItem button key="Room">
+        <NavLink to="/team-member-finder">
+          <ListItem button key="team">
             <ListItemIcon>
-              <RoomIcon />
+              <PeopleIcon />
             </ListItemIcon>
-            <ListItemText primary="Meeting Room Finder" />
+            <ListItemText primary="Team Member Finder" />
           </ListItem>
         </NavLink>
         <NavLink to="/DataVis">
