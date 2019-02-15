@@ -28,11 +28,11 @@ class TeamMemberFinder extends Component {
     filter: "",
     data: [
       {
-        name: "Neha Wadha",
+        name: "Neha Wadhwa",
         location: "Home"
       },
       {
-        name: "Jolene Farrel",
+        name: "Jolene Farrell",
         location: "Home"
       },
       {
@@ -80,11 +80,11 @@ class TeamMemberFinder extends Component {
         location: "OnSite"
       },
       {
-        name: "Shivani",
+        name: "Shivani Sangar",
         location: "Leave"
       },
       {
-        name: "Zac Perillo",
+        name: "Daniel de Waard",
         location: "Leave"
       },
       {
