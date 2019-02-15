@@ -7,6 +7,7 @@ import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
+import { NavLink, Link } from "react-router-dom";
 
 const style = {
   background: "white",
@@ -166,7 +167,11 @@ class TeamMemberFinder extends Component {
                   <div key={item.name}>
                     <div>
                       {item.location === "Office" && (
-                        <Button label={item.name} />
+                        <Button
+                          component={Link}
+                          to="/IndividualLocation"
+                          label={item.name}
+                        />
                       )}
                     </div>
                     <div />
