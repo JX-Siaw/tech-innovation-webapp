@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { Route, Switch, Router, NavLink } from "react-router-dom";
-import createBrowserHistory from 'history/createBrowserHistory';
+import { Route, Switch, BrowserRouter, NavLink } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 
@@ -19,9 +18,7 @@ import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
 
 import "./styles.css";
-
-const history = createBrowserHistory();
-
+// Hello
 class App extends Component {
   constructor(props) {
     super(props);
@@ -56,6 +53,7 @@ class App extends Component {
         <NavBar
           onClick={() => {
             this.setState({ drawerIsOpen: true });
+            console.log(this.state.drawerIsOpen);
           }}
         />
         <Switch>
@@ -77,8 +75,8 @@ class App extends Component {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <Router history={history}>
+  <BrowserRouter>
     <App />
-  </Router>,
+  </BrowserRouter>,
   rootElement
 );
