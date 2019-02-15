@@ -29,12 +29,12 @@ const sideDrawer = () => {
             <ListItemText primary="Home" />
           </ListItem>
         </NavLink>
-        <NavLink to="/meeting-room-finder">
+        <NavLink to="/team-member-finder">
           <ListItem button key="Room">
             <ListItemIcon>
               <RoomIcon />
             </ListItemIcon>
-            <ListItemText primary="Meeting Room Finder" />
+            <ListItemText primary="Team Member Finder" />
           </ListItem>
         </NavLink>
         <NavLink to="/Team-Data">

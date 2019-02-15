@@ -110,7 +110,7 @@ class TeamMemberFinder extends Component {
       <div
         style={{
           backgroundImage: "url(" + myImage + ")",
-          height: "100vh",
+          height: "100%",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat"

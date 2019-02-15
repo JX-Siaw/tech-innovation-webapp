@@ -36,7 +36,7 @@ class DefaultLocation extends Component {
           </NavLink>
           <br />
           <NavLink
-            to="/find"
+            to="/team-member-finder"
             style={{
               textDecoration: "none"
             }}

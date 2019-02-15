@@ -31,11 +31,11 @@ class Home extends Component {
           <br />
         </center>
         <Icon />
-        <NavLink to="/meeting-room-finder" style={{ textDecoration: "none" }}>
+        <NavLink to="/team-member-finder" style={{ textDecoration: "none" }}>
           <Button label="Alice" onClick={this.toggleData} />
         </NavLink>
         <p class="tab" />
-        <NavLink to="/meeting-room-finder" style={{ textDecoration: "none" }}>
+        <NavLink to="/team-member-finder" style={{ textDecoration: "none" }}>
           <Icon />
           <Button label="Alice" onClick={this.toggleData} />
         </NavLink>

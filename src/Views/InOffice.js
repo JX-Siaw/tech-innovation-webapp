@@ -308,17 +308,7 @@ class AtOffice extends Component {
                 left="85%"
                 top="78%"
               />
-              <img
-                src={floorplan}
-                border="3"
-                style={{
-                  display: "block",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  maxWidth: "100%",
-                  maxHeight: "100%"
-                }}
-              />
+             
             </div>
           </div>
         </center>
