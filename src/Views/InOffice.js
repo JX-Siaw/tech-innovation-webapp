@@ -282,7 +282,7 @@ class AtOffice extends Component {
                 top="79%"
               />
               <Bubble
-                id="27"
+                id="28"
                 colour="grey"
                 hovercolour="#3f51b5"
                 radius="7%"
@@ -291,7 +291,7 @@ class AtOffice extends Component {
                 top="79%"
               />
               <Bubble
-                id="27"
+                id="29"
                 colour="grey"
                 hovercolour="#3f51b5"
                 radius="7%"
@@ -300,7 +300,7 @@ class AtOffice extends Component {
                 top="80%"
               />
               <Bubble
-                id="27"
+                id="30"
                 colour="grey"
                 hovercolour="#3f51b5"
                 radius="7%"

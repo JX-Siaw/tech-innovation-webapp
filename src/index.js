@@ -17,6 +17,8 @@ import ComponentDemo from "./Views/ComponentDemo";
 import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
 
+import IndividualLocation from "./Views/IndividualLocation";
+
 import "./styles.css";
 // Hello
 class App extends Component {
@@ -67,6 +69,7 @@ class App extends Component {
           <Route path="/options" component={Options} />
           <Route path="/DefaultLocation" component={DefaultLocation} />
           <Route path="/SetDefaultLocation" component={SetDefaultLocation} />
+          <Route path="/IndividualLocation" component={IndividualLocation} />
         </Switch>
       </div>
     );
