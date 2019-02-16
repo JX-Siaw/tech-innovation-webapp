@@ -48,7 +48,6 @@ const styles = theme => ({
 
 function CustomizedButtons(props) {
   const { classes } = props;
-
   return (
     <div>
       <NotifButton
@@ -63,7 +62,7 @@ function CustomizedButtons(props) {
         }}
         className={classNames(classes.margin, classes.bootstrapRoot)}
       >
-        {props.label}
+        Turn Notifications Off
       </NotifButton>
     </div>
   );

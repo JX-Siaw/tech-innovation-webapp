@@ -8,15 +8,31 @@ import NotifButton from "../Components/NotifButton/NotifButton";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
 class Options extends Component {
-  constructor() {
-    super();
-    this.state = { title: "Notification On" };
-  }
-  changeTitle = () => {
-    this.setState({ title: "Notification Off" });
-  };
+  constructor(props) {
+    super(props);
+
+      this.handleLoginClick = this.handleLoginClick.bind(this);
+      this.handleLogoutClick = this.handleLogoutClick.bind(this);
+      this.state = {isLoggedIn: true};
+    }
+
+    handleLoginClick() {
+      this.setState({isLoggedIn: false});
+    }
+
+    handleLogoutClick() {
+      this.setState({isLoggedIn: true});
+    }
 
   render() {
+    const isLoggedIn = this.state.isLoggedIn;
+     let button;
+     if (isLoggedIn) {
+      button = <Button onClick={this.handleLogoutClick} style={{padding:"20px"}} label = "Turn notifications on" />;
+    } else {
+      button = <Button onClick={this.handleLoginClick} style={{padding:"20px"}} label = "Turn notifications off"/>;
+    }
+
     return (
       <div
         style={{
@@ -36,7 +52,7 @@ class Options extends Component {
           <br/>
           <Button style={{padding:"20px"}} label="Set WFH Days" />
           <br/>
-          <NotifButton style={{padding:"20px"}} label="Notification On" />
+          {button}
           <br/>
           </center>
 

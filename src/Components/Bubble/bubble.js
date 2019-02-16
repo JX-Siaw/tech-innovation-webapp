@@ -36,7 +36,7 @@ function bubble(props) {
   };
 
   return (
-    <NavLink to="/team-member-finder">
+    <NavLink to="/LoggedOffice">
       <div
         style={{
           position: "absolute",
