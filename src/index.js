@@ -70,6 +70,8 @@ class App extends Component {
           <Route path="/DefaultLocation" component={DefaultLocation} />
           <Route path="/SetDefaultLocation" component={SetDefaultLocation} />
           <Route path="/IndividualLocation" component={IndividualLocation} />
+          <Route path="/Home" component={Home} />
+          <Route path="/TeamMemberFinder" component={TeamMemberFinder}/>
         </Switch>
       </div>
     );

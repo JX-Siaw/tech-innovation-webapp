@@ -31,7 +31,7 @@ const NavBar = props => {
                     </IconButton>
 
                     <div>
-                        
+
                     </div>
                 </Toolbar>
             </AppBar>

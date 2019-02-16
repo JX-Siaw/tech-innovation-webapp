@@ -7,7 +7,13 @@ import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
+import { Container, Row, Col } from 'react-grid-system';
+import HomeIcon from 'react-icons/lib/fa/home';
+import OfficeIcon from 'react-icons/lib/fa/building';
+import OnSiteIcon from 'react-icons/lib/fa/automobile';
+import LeaveIcon from 'react-icons/lib/fa/user-times';
 import { NavLink, Link } from "react-router-dom";
+
 
 const style = {
   background: "white",
@@ -16,6 +22,16 @@ const style = {
   color: "black",
   height: 48,
   padding: "0 70px",
+  boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)"
+};
+const rowstyle = {
+  borderRadius: 9,
+  border: "0px solid",
+  color: "white",
+  paddingTop: "10px",
+  paddingBottom: "10px",
+  paddingRight: "100px",
+  paddingLeft: "100px",
   boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)"
 };
 
@@ -30,11 +46,11 @@ class TeamMemberFinder extends Component {
     data: [
       {
         name: "Neha Wadhwa",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Jolene Farrell",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Julia Zhang",
@@ -42,7 +58,7 @@ class TeamMemberFinder extends Component {
       },
       {
         name: "Ajinkya Khairnar",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Jacky Li",
@@ -81,11 +97,11 @@ class TeamMemberFinder extends Component {
         location: "OnSite"
       },
       {
-        name: "Shivani Sangar",
+        name: "Shivani",
         location: "Leave"
       },
       {
-        name: "Daniel de Waard",
+        name: "Zac Perillo",
         location: "Leave"
       },
       {
@@ -99,24 +115,133 @@ class TeamMemberFinder extends Component {
     this.setState({ filter: event.target.value });
   };
 
+
   render() {
     const { filter, data } = this.state;
     const lowercasedFilter = filter.toLowerCase();
+
     const filteredData = data.filter(item => {
       return Object.keys(item).some(key =>
         item[key].toLowerCase().includes(lowercasedFilter)
       );
     });
+
+    const findOccurences = (array, attr) => {
+      return (array.filter((obj) => (obj.location === attr))).length
+    }
+
+    const showHomeFlag = findOccurences(filteredData, 'Home')
+    const showOfficeFlag = findOccurences(filteredData, 'Office')
+    const showOutofOfficeFlag = findOccurences(filteredData, 'OnSite')
+    const showLeaveFlag = findOccurences(filteredData, 'Leave')
+
+    let homePanel
+
+    if (showHomeFlag) {
+      homePanel =
+      (
+      <div>
+      <div style={{display:"flex"}}>
+      <h2>Home</h2>
+      <HomeIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
+      </div>
+        <Row style={rowstyle} >
+          {filteredData.map(item => (
+            <div key={item.name}>
+              <div>
+                {item.location === "Home" && <Button label={item.name} />}
+              </div>
+            </div>
+          ))}
+          </Row>
+          </div>
+        )
+    } else {
+      //do nothing
+    }
+
+    let officePanel
+    if (showOfficeFlag) {
+      officePanel =
+      (
+        <div>
+        <div style={{display:"flex"}}>
+        <h2>Office</h2>
+        <OfficeIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
+        </div>
+        <Row style={rowstyle} >
+          {filteredData.map(item => (
+            <div key={item.name}>
+              <div>
+                {item.location === "Office" && <Button label={item.name} component={Link} to="/InOffice" />}
+              </div>
+            </div>
+          ))}
+          </Row>
+          </div>
+        )
+    } else {
+      //do nothing
+    }
+
+    let outofofficePanel
+    if (showOutofOfficeFlag) {
+      outofofficePanel =
+      (
+        <div>
+        <div style={{display:"flex", justifycontent: "spacebetween" }}>
+        <h2>Out of office</h2>
+        <OnSiteIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
+        </div>
+        <Row style={rowstyle} >
+          {filteredData.map(item => (
+            <div key={item.name}>
+              <div>
+                {item.location === "OnSite" && <Button label={item.name} />}
+              </div>
+            </div>
+          ))}
+          </Row>
+          </div>
+        )
+    } else {
+      //do nothing
+    }
+    let leavePanel
+    if (showLeaveFlag) {
+      leavePanel =
+      (
+        <div>
+        <div style={{display:"flex"}}>
+        <h2>Leave</h2>
+        <LeaveIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
+        </div>
+        <Row style={rowstyle} >
+          {filteredData.map(item => (
+            <div key={item.name}>
+              <div>
+                {item.location === "OnSite" && <Button label={item.name} />}
+              </div>
+            </div>
+          ))}
+          </Row>
+          </div>
+        )
+    } else {
+      //do nothing
+    }
+
     return (
       <div
         style={{
           backgroundImage: "url(" + myImage + ")",
-          height: "100%",
+          height: "150vh",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat"
         }}
       >
+      <div>
         <center>
           <br /> <br />
           <h1> Where is my Team? </h1>
@@ -132,97 +257,22 @@ class TeamMemberFinder extends Component {
             />
           </center>
         </div>
-        <br /> <br />
-        <br />
-        <center>
-          <div style={{ display: "flex" }}>
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Home</legend>
-                {filteredData.map(item => (
-                  <div key={item.name}>
-                    <div>
-                      {item.location === "Home" && <Button label={item.name} />}
-                    </div>
-                    <div />
-                  </div>
-                ))}
-              </fieldset>
-            </Grid>
-
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Office</legend>
-                {filteredData.map(item => (
-                  <div key={item.name}>
-                    <div>
-                      {item.location === "Office" && (
-                        <Button
-                          component={Link}
-                          to="/IndividualLocation"
-                          label={item.name}
-                        />
-                      )}
-                    </div>
-                    <div />
-                  </div>
-                ))}
-              </fieldset>
-            </Grid>
-
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Out of office</legend>
-                {filteredData.map(item => (
-                  <div key={item.name}>
-                    <div>
-                      {item.location === "OnSite" && (
-                        <Button label={item.name} />
-                      )}
-                    </div>
-                    <div />
-                  </div>
-                ))}
-              </fieldset>
-            </Grid>
-
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Leave</legend>
-                {filteredData.map(item => (
-                  <div key={item.name}>
-                    <div>
-                      {item.location === "Leave" && (
-                        <Button label={item.name} />
-                      )}
-                    </div>
-                    <div />
-                  </div>
-                ))}
-              </fieldset>
-            </Grid>
+      <br/>
+          <div>
+          <center>
+          <Container>
+          {officePanel}
+          <br/>
+            {homePanel}
+            <br/>
+          {outofofficePanel}
+            <br/>
+          {leavePanel}
+          </Container>
+          <br/>
+          </center>
           </div>
-        </center>
+        </div>
       </div>
     );
   }

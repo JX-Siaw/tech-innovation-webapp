@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 
@@ -20,32 +20,12 @@ class Home extends Component {
           <br />
           <h1>Telstra PinPoint</h1>
           <br />
-          <NavLink
-            to="/Locations"
-            style={{
-              textDecoration: "none"
-            }}
-          >
-            <Button label="Log Location" onClick={this.toggleData} />
-          </NavLink>
+
+          <Button label="Log Location" component={Link} to="/Locations"/>
           <br />
-          <NavLink
-            to="/team-member-finder"
-            style={{
-              textDecoration: "none"
-            }}
-          >
-            <Button label="Find Team" onClick={this.toggleData} />
-          </NavLink>
+          <Button label="Find Team" component={Link} to="/TeamMemberFinder"/>
           <br />
-          <NavLink
-            to="/Options"
-            style={{
-              textDecoration: "none"
-            }}
-          >
-            <Button label="Options" onClick={this.toggleData} />
-          </NavLink>
+          <Button label="Options" component={Link} to="/Options"/>
         </center>
       </div>
     );
