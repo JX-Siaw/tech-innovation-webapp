@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
+import LocationButton from "../Components/Button/locationbutton";
 import pinpointLogo from "../Assets/Pictures/Pinpoint-logo.png";
+import Snack from "../Components/SnackBar/snack";
 
-class DefaultLocation extends Component {
+class LoggedOffice extends Component {
   render() {
     return (
       <div
@@ -17,8 +19,8 @@ class DefaultLocation extends Component {
         }}
       >
         <div align="right" style={{ marginRight: "30px" }}>
-          <Button
-            label="Default Location: L5 242 Exhibition Street"
+          <LocationButton
+            label="Location: L5, Zone 4,242 Exhibition St, VIC"
             onClick={this.toggleData}
           />
         </div>
@@ -42,9 +44,10 @@ class DefaultLocation extends Component {
           <br />
           <Button label="Options" component={Link} to="/Options"/>
         </center>
+          <Snack/>
       </div>
     );
   }
 }
 
-export default DefaultLocation;
+export default LoggedOffice;

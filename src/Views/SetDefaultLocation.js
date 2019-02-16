@@ -6,6 +6,7 @@ import DropdownF from "../Components/Dropdown/dropdownFloor";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
+
 class SetDefaultLocation extends Component {
   render() {
     return (
@@ -20,7 +21,7 @@ class SetDefaultLocation extends Component {
       >
         <center>
           <br />
-          <h1> Set Default Location </h1>
+          <h1> Set Office Location </h1>
           <br />
         </center>
         <center>
@@ -32,7 +33,7 @@ class SetDefaultLocation extends Component {
           <DropdownF />
         </center>
         <p align="right" style={{ marginRight: "50px" }}>
-          <NavLink to="/DefaultLocation" style={{ textDecoration: "none" }}>
+          <NavLink to="/LoggedHome" style={{ textDecoration: "none" }}>
             <Button label="Save Location" />
           </NavLink>
         </p>

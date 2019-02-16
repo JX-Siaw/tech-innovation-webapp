@@ -41,7 +41,7 @@ class Options extends Component {
           </center>
 
         <p align="right" style={{ marginRight: "50px" }}>
-          <NavLink to="/DefaultLocation" style={{ textDecoration: "none" }}>
+          <NavLink to="/Home" style={{ textDecoration: "none" }}>
             <Button label="Save Options" />
           </NavLink>
         </p>

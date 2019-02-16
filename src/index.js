@@ -16,6 +16,8 @@ import DataVis from "./Views/DataVis";
 import ComponentDemo from "./Views/ComponentDemo";
 import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
+import LoggedHome from "./Views/LoggedHome";
+import LoggedOffice from "./Views/LoggedOffice";
 
 import IndividualLocation from "./Views/IndividualLocation";
 
@@ -72,6 +74,8 @@ class App extends Component {
           <Route path="/IndividualLocation" component={IndividualLocation} />
           <Route path="/Home" component={Home} />
           <Route path="/TeamMemberFinder" component={TeamMemberFinder}/>
+          <Route path="/LoggedHome" component={LoggedHome}/>
+          <Route path="/LoggedOffice" component={LoggedOffice}/>
         </Switch>
       </div>
     );

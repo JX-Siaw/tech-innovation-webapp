@@ -1,6 +1,22 @@
 import React, {Component} from "react";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
+import { NavLink, Link } from "react-router-dom";
+import Input from "@material-ui/core/Input";
+
+
+
+const style = {
+  background: "white",
+  borderRadius: 9,
+  border: 0,
+  color: "black",
+  height: 48,
+  padding: "20px",
+  boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)"
+};
+
+
 class OnSite extends Component {
     render() {
         return (
@@ -18,15 +34,20 @@ class OnSite extends Component {
                     <br/>
 
                     <h1>
-                        On Site
+                        Out of the office?
                     </h1>
+                      <br/>  <br/>  <br/>  <br/>
                     <p1>
-                        How long will you be onsite?</p1>
+                        Please enter estimated time of return </p1>
                     <br/>
                     <br/>
-                    <input id="my-time" placeholder="Time (hh:mm)"/>
-                    <br/>
-                    <Button label="Confirm" onClick={this.toggleData}/>
+                    <Input
+                      style={style}
+                      disableUnderline={true}
+                      placeholder="Time:(HH:MM)"
+                    />
+                    <br/>  <br/>
+                    <Button label="Confirm" component={Link} to="/LoggedHome" />
                 </center>
             </div>
         );

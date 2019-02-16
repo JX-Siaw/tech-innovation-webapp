@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import { NavLink, Link } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
+
 class Locations extends Component {
 
   render() {
@@ -22,7 +23,7 @@ class Locations extends Component {
           <br />
             <Button component={Link} to="/InOffice" label="Office" />
           <br />
-            <Button label="Home" component={Link} to="/Home" />
+            <Button label="Home" component={Link} to="/LoggedHome" />
           <br />
             <Button label="Out of office" component={Link} to="/OnSite" />
         </center>

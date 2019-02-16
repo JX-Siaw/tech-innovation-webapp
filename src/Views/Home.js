@@ -30,7 +30,6 @@ class Home extends Component {
           }} />
           </div>
           <br />
-
           <Button label="Log Location" component={Link} to="/Locations"/>
           <br />
           <Button label="Find Team" component={Link} to="/TeamMemberFinder"/>
