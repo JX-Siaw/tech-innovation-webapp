@@ -30,18 +30,16 @@ class Options extends Component {
         <center>
           <br />
           <h1> Options </h1>
-        </center>
-        <p style={{ marginLeft: "60px" }}>
           <NavLink to="/SetDefaultLocation" style={{ textDecoration: "none" }}>
             <Button label="Set Default Location" />
           </NavLink>
-        </p>
-        <p style={{ marginLeft: "60px" }}>
-          <Button label="Set WFH Days" />
-        </p>
-        <p style={{ marginLeft: "60px" }}>
-          <NotifButton label="Notification On" />
-        </p>
+          <br/>
+          <Button style={{padding:"20px"}} label="Set WFH Days" />
+          <br/>
+          <NotifButton style={{padding:"20px"}} label="Notification On" />
+          <br/>
+          </center>
+
         <p align="right" style={{ marginRight: "50px" }}>
           <NavLink to="/DefaultLocation" style={{ textDecoration: "none" }}>
             <Button label="Save Options" />
