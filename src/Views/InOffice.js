@@ -19,7 +19,7 @@ class AtOffice extends Component {
               display: "inline-block",
               maxWidth: "70%",
               maxHeight: "70%",
-              zoom: 1
+              zoom: 1,
             }}
           >
             <div style={{
@@ -307,10 +307,9 @@ class AtOffice extends Component {
                   display: "block",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  width: '100%',
                   height: 'auto',
                   maxWidth: '100%',
-                  maxHeight: '70vh'
+                  maxHeight: '70vh',
                 }}
               />
             </div>
