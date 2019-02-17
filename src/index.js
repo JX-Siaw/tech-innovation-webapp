@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { Route, Switch, BrowserRouter, NavLink } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 import myImage from "./Assets/Pictures/Pacific-RGB.png";
@@ -14,7 +14,6 @@ import InOffice from "./Views/InOffice";
 import OnSite from "./Views/OnSite";
 import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
-import ComponentDemo from "./Views/ComponentDemo";
 import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
 import LoggedHome from "./Views/LoggedHome";
@@ -23,12 +22,7 @@ import LoggedOffice from "./Views/LoggedOffice";
 import IndividualLocation from "./Views/IndividualLocation";
 
 import "./styles.css";
-// Hello
-const sectionStyle = {
-  width: "100%",
-  height: "100%",
-  backgroundImage: "url(${myImage})"
-}
+
 
 class App extends Component {
   constructor(props) {
@@ -77,7 +71,6 @@ class App extends Component {
         <Switch>
           <Route path="/team-member-finder" component={TeamMemberFinder} />
           <Route path="/Team-Data" component={DataVis} />
-          <Route path="/component-demo" component={ComponentDemo} />
           <Route exact path="/" component={Home} />
           <Route path="/locations" component={Locations} />
           <Route path="/inoffice" component={InOffice} />

@@ -5,15 +5,10 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import DeskIcon from "@material-ui/icons/DesktopMac";
 import RoomIcon from "@material-ui/icons/MeetingRoom";
 import HomeIcon from "@material-ui/icons/Home";
-import WorkIcon from "@material-ui/icons/Work";
 import GraphIcon from "@material-ui/icons/GraphicEq";
 import MenuIcon from "@material-ui/icons/Menu";
-import LocationIcon from "@material-ui/icons/NotListedLocation";
-import DirectionIcon from "@material-ui/icons/DirectionsWalk";
-import SearchIcon from "@material-ui/icons/LocationSearching";
 
 import classes from "./sidedrawer.modules.css";
 

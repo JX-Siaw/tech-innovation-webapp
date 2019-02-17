@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 import Input from "@material-ui/core/Input";
-import GridList from "@material-ui/core/GridList";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import GridListTile from "@material-ui/core/GridListTile";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
-import Tooltip from "@material-ui/core/Tooltip";
-import Grid from "@material-ui/core/Grid";
-import { Container, Row, Col } from 'react-grid-system';
+import { Container, Row } from 'react-grid-system';
 import HomeIcon from 'react-icons/lib/fa/home';
 import OfficeIcon from 'react-icons/lib/fa/building';
 import OnSiteIcon from 'react-icons/lib/fa/automobile';
 import LeaveIcon from 'react-icons/lib/fa/user-times';
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const style = {
@@ -33,11 +28,6 @@ const rowstyle = {
   paddingRight: "100px",
   paddingLeft: "100px",
   boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)"
-};
-
-const divStyle = {
-  display: "flex",
-  alignItems: "center"
 };
 
 class TeamMemberFinder extends Component {

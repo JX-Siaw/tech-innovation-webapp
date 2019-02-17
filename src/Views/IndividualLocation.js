@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import Button from "../Components/Button/button";
 import Bubble from "../Components/Bubble/bubble";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
-import telstraLogo from "../Assets/Pictures/Logo.png";
 import floorplan from "../Assets/Pictures/level7.jpg";
 
 class AtOffice extends Component {
@@ -50,6 +48,7 @@ class AtOffice extends Component {
 
               <img
                 src={floorplan}
+                alt=""
                 border="3"
                 style={{
                   display: "block",

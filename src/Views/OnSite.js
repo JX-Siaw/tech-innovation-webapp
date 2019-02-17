@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Input from "@material-ui/core/Input";
 
 

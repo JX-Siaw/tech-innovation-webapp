@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import pinpointLogo from "../Assets/Pictures/Pinpoint-logo.png";
@@ -30,6 +30,7 @@ class DefaultLocation extends Component {
           <img
             className='pull-right'
             src={pinpointLogo}
+            alt=""
             style={{
               height: 100,
               width: 80,

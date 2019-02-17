@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import LocationButton from "../Components/Button/locationbutton";
@@ -34,6 +34,7 @@ class LoggedOffice extends Component {
           <div>
           <img
             className='pull-right'
+            alt=""
             src={pinpointLogo}
             style={{
               height: 80,

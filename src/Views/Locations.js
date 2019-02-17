@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "../Components/Button/button";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
 class Locations extends Component {

@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Checkbox from "../Components/Check/check";
-import CheckD from "../Components/Check/checkDate";
-import Dropdown from "../Components/Dropdown/dropdown";
 import Button from "../Components/Button/button";
 import Button1 from "../Components/Button/notifson";
 import Button2 from "../Components/Button/notifsoff";
-import NotifButton from "../Components/NotifButton/NotifButton";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
 class Options extends Component {

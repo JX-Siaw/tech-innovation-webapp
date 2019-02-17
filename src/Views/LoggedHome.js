@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
-import myImage from "../Assets/Pictures/Pacific-RGB.png";
+import { Link } from "react-router-dom";
 import Button from "../Components/Button/button";
 import LocationButton from "../Components/Button/locationbutton";
 import pinpointLogo from "../Assets/Pictures/Pinpoint-logo.png";
@@ -10,13 +9,6 @@ class LoggedHome extends Component {
   render() {
     return (
       <div
-        style={{
-          backgroundImage: "url(" + myImage + ")",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          height: "100vh"
-        }}
       >
         <div align="right" style={{ marginRight: "30px" }}>
           <LocationButton
@@ -35,6 +27,7 @@ class LoggedHome extends Component {
           <img
             className='pull-right'
             src={pinpointLogo}
+            alt=""
             style={{
               height: 80,
               width: 65,
