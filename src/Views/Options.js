@@ -19,10 +19,13 @@ class Options extends Component {
     }
 
     handleLoginClick() {
+      console.log(this.state.isLoggedIn)
+
       this.setState({isLoggedIn: true});
     }
 
     handleLogoutClick() {
+      console.log(this.state.isLoggedIn)
       this.setState({isLoggedIn: false});
     }
 
@@ -30,9 +33,9 @@ class Options extends Component {
     const isLoggedIn = this.state.isLoggedIn;
      let button;
      if (isLoggedIn) {
-      button = <Button1 onClick={this.handleLogoutClick} style={{padding:"20px"}} label="Hi"/>;
+      button = <Button click={this.handleLogoutClick} style={{padding:"20px"}} label="Hi"/>;
     } else {
-      button = <Button2 onClick={this.handleLoginClick} style={{padding:"20px"}} label ="Hello"/>;
+      button = <Button click={this.handleLoginClick} style={{padding:"20px"}} label ="Hello"/>;
     }
 
     return (

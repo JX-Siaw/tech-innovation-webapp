@@ -64,6 +64,7 @@ function CustomizedButtons(props) {
           maxHeight: 200
         }}
         className={classNames(classes.margin, classes.bootstrapRoot)}
+        onClick={props.click}
       >
         {props.label}
       </Button>
