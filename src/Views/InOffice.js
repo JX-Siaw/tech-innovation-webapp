@@ -9,20 +9,8 @@ class AtOffice extends Component {
   render() {
     return (
       <div
-        style={{
-          backgroundImage: "url(" + myImage + ")",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          height: "100%"
-        }}
       >
         <center
-          style={{
-            backgroundImage: "url(" + myImage + ")",
-            backgroundSize: "cover",
-            height: "100vh"
-          }}
         >
           <br />
           <h1> Where in the office are you?</h1>
@@ -37,11 +25,17 @@ class AtOffice extends Component {
               zoom: 1
             }}
           >
-            <div>
+            <div style={{
+                        backgroundImage: "url(" + floorplan + ")",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        height: "100%"
+            }}>
               <Bubble
                 id="1"
                 colour="grey"
-                hovercolour="#3f51b5"
+                hovercol our="#3f51b5"
                 radius="8%"
                 opacity="0.5"
                 left="28%"
@@ -315,8 +309,10 @@ class AtOffice extends Component {
                   display: "block",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  maxWidth: "100%",
-                  maxHeight: "100%"
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '100%',
+                  maxHeight: '70vh'
                 }}
               />
             </div>

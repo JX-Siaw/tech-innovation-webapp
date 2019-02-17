@@ -7,15 +7,7 @@ import Button from "../Components/Button/button";
 class Home extends Component {
   render() {
     return (
-      <div
-        style={{
-          backgroundImage: "url(" + myImage + ")",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          height: "100vh"
-        }}
-      >
+      <div>
         <center>
           <br />
           <br />

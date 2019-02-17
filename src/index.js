@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Route, Switch, BrowserRouter, NavLink } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
+import myImage from "./Assets/Pictures/Pacific-RGB.png";
 
 import NavBar from "./Components//NavBar/navbar";
 import SideDrawer from "./Components/SideDrawer/sidedrawer";
@@ -23,6 +24,12 @@ import IndividualLocation from "./Views/IndividualLocation";
 
 import "./styles.css";
 // Hello
+const sectionStyle = {
+  width: "100%",
+  height: "100%",
+  backgroundImage: "url(${myImage})"
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +46,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div         
+        style={{
+        backgroundImage: "url(" + myImage + ")",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: '100vh'
+      }}>
         <CssBaseline />
         <Drawer
           open={this.state.drawerIsOpen}
