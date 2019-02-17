@@ -27,15 +27,19 @@ class LoggedHome extends Component {
         <center>
           <br />
           <br />
-          <div style={{display:"flex",paddingLeft: "1100px"}}>
+          <div style={{display:"flex", justifyContent: "center"}}>
+          <div>
           <h1>Telstra PinPoint</h1>
+          </div>
+          <div>
           <img
             className='pull-right'
             src={pinpointLogo}
             style={{
-              height: 100,
-              width: 80,
+              height: 80,
+              width: 65,
           }} />
+          </div>
           </div>
           <br />
           <Button label="Log Location" component={Link} to="/Locations"/>

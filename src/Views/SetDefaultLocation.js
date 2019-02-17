@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Dropdown from "../Components/Dropdown/dropdown";
 import DropdownB from "../Components/Dropdown/dropdownBuilding";
 import DropdownF from "../Components/Dropdown/dropdownFloor";
@@ -26,7 +26,7 @@ class SetDefaultLocation extends Component {
         </center>
         <center>
           State
-          <Dropdown />
+          <Dropdown/>
           Building
           <DropdownB />
           Floor
@@ -34,7 +34,7 @@ class SetDefaultLocation extends Component {
         </center>
         <p align="right" style={{ marginRight: "50px" }}>
           <NavLink to="/LoggedHome" style={{ textDecoration: "none" }}>
-            <Button label="Save Location" />
+            <Button label="Save Location" component={Link} to="/InOffice"/>
           </NavLink>
         </p>
       </div>

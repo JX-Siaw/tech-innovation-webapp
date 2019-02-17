@@ -4,12 +4,14 @@ import Checkbox from "../Components/Check/check";
 import CheckD from "../Components/Check/checkDate";
 import Dropdown from "../Components/Dropdown/dropdown";
 import Button from "../Components/Button/button";
+import Button1 from "../Components/Button/notifson";
+import Button2 from "../Components/Button/notifsoff";
 import NotifButton from "../Components/NotifButton/NotifButton";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
 class Options extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
       this.handleLoginClick = this.handleLoginClick.bind(this);
       this.handleLogoutClick = this.handleLogoutClick.bind(this);
@@ -17,20 +19,20 @@ class Options extends Component {
     }
 
     handleLoginClick() {
-      this.setState({isLoggedIn: false});
+      this.setState({isLoggedIn: true});
     }
 
     handleLogoutClick() {
-      this.setState({isLoggedIn: true});
+      this.setState({isLoggedIn: false});
     }
 
   render() {
     const isLoggedIn = this.state.isLoggedIn;
      let button;
      if (isLoggedIn) {
-      button = <Button onClick={this.handleLogoutClick} style={{padding:"20px"}} label = "Turn notifications on" />;
+      button = <Button1 onClick={this.handleLogoutClick} style={{padding:"20px"}}/>;
     } else {
-      button = <Button onClick={this.handleLoginClick} style={{padding:"20px"}} label = "Turn notifications off"/>;
+      button = <Button2 onClick={this.handleLoginClick} style={{padding:"20px"}}/>;
     }
 
     return (
@@ -55,7 +57,6 @@ class Options extends Component {
           {button}
           <br/>
           </center>
-
         <p align="right" style={{ marginRight: "50px" }}>
           <NavLink to="/Home" style={{ textDecoration: "none" }}>
             <Button label="Save Options" />
