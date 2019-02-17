@@ -32,10 +32,8 @@ class SetDefaultLocation extends Component {
           Floor
           <DropdownF />
         </center>
-        <p align="right" style={{ marginRight: "50px" }}>
-          <NavLink to="/LoggedHome" style={{ textDecoration: "none" }}>
+        <p align="right" style={{ marginRight: "400px" }}>
             <Button label="Save Location" component={Link} to="/InOffice"/>
-          </NavLink>
         </p>
       </div>
     );

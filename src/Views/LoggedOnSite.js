@@ -1,16 +1,32 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import pinpointLogo from "../Assets/Pictures/Pinpoint-logo.png";
+import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
+import LocationButton from "../Components/Button/locationbutton";
+import pinpointLogo from "../Assets/Pictures/Pinpoint-logo.png";
+import Snack from "../Components/SnackBar/snack";
 
-class Home extends Component {
+class LoggedOnSite extends Component {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          backgroundImage: "url(" + myImage + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: "100vh"
+        }}
+      >
+        <div align="right" style={{ marginRight: "30px" }}>
+          <LocationButton
+            label="Location: Out of Office"
+            onClick={this.toggleData}
+          />
+        </div>
         <center>
           <br />
           <br />
-          <br /><br /><br /><br /><br/>
           <div style={{display:"flex", justifyContent: "center"}}>
           <div>
           <h1>Telstra PinPoint</h1>
@@ -33,9 +49,10 @@ class Home extends Component {
           <br />
           <Button label="Options" component={Link} to="/Options"/>
         </center>
+          <Snack/>
       </div>
     );
   }
 }
 
-export default Home;
+export default LoggedOnSite;

@@ -47,7 +47,7 @@ class OnSite extends Component {
                       placeholder="Time:(HH:MM)"
                     />
                     <br/>  <br/>
-                    <Button label="Confirm" component={Link} to="/LoggedHome" />
+                    <Button label="Confirm" component={Link} to="/LoggedOnSite" />
                 </center>
             </div>
         );

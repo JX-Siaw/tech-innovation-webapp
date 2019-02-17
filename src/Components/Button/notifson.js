@@ -65,7 +65,7 @@ function CustomizedButtons(props) {
         }}
         className={classNames(classes.margin, classes.bootstrapRoot)}
       >
-        Notifications On
+        {props.label}
       </Button>
     </div>
   );

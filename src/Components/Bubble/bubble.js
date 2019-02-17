@@ -33,6 +33,7 @@ function bubble(props) {
     el.style.opacity = props.opacity;
   };
 
+
   return (
     <NavLink to="/LoggedOffice">
       <div

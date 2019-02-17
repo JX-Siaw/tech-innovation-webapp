@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Checkbox from "../Components/Check/check";
+import CheckD from "../Components/Check/checkDate";
+import Dropdown from "../Components/Dropdown/dropdown";
 import Button from "../Components/Button/button";
 import Button1 from "../Components/Button/notifson";
 import Button2 from "../Components/Button/notifsoff";
+import NotifButton from "../Components/NotifButton/NotifButton";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
 class Options extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
       this.handleLoginClick = this.handleLoginClick.bind(this);
       this.handleLogoutClick = this.handleLogoutClick.bind(this);
@@ -26,9 +30,9 @@ class Options extends Component {
     const isLoggedIn = this.state.isLoggedIn;
      let button;
      if (isLoggedIn) {
-      button = <Button1 onClick={this.handleLogoutClick} style={{padding:"20px"}}/>;
+      button = <Button1 onClick={this.handleLogoutClick} style={{padding:"20px"}} label="Hi"/>;
     } else {
-      button = <Button2 onClick={this.handleLoginClick} style={{padding:"20px"}}/>;
+      button = <Button2 onClick={this.handleLoginClick} style={{padding:"20px"}} label ="Hello"/>;
     }
 
     return (

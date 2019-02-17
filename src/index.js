@@ -18,6 +18,7 @@ import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
 import LoggedHome from "./Views/LoggedHome";
 import LoggedOffice from "./Views/LoggedOffice";
+import LoggedOnSite from "./Views/LoggedOnSite";
 
 import IndividualLocation from "./Views/IndividualLocation";
 
@@ -40,7 +41,7 @@ class App extends Component {
 
   render() {
     return (
-      <div         
+      <div
         style={{
         backgroundImage: "url(" + myImage + ")",
         backgroundPosition: "center center",
@@ -83,6 +84,7 @@ class App extends Component {
           <Route path="/TeamMemberFinder" component={TeamMemberFinder}/>
           <Route path="/LoggedHome" component={LoggedHome}/>
           <Route path="/LoggedOffice" component={LoggedOffice}/>
+          <Route path="/LoggedOnSite" component={LoggedOnSite}/>
         </Switch>
       </div>
     );
