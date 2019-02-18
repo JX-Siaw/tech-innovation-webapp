@@ -33,7 +33,7 @@ class SetDefaultLocation extends Component {
           <DropdownF />
         </center>
         <p align="right" style={{ marginRight: "400px" }}>
-            <Button label="Save Location" component={Link} to="/InOffice"/>
+            <Button label="Select Zone" component={Link} to="/InOffice"/>
         </p>
       </div>
     );

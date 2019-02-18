@@ -35,7 +35,7 @@ function bubble(props) {
 
 
   return (
-    <NavLink to="/LoggedOffice">
+
       <div
         style={{
           position: "absolute",
@@ -49,8 +49,9 @@ function bubble(props) {
         }}
         onMouseEnter={event => onMouseOver(event)}
         onMouseLeave={event => onMouseOut(event)}
+        onClick={props.click}
       />
-    </NavLink>
+
   );
 }
 
