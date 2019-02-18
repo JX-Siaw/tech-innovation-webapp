@@ -58,9 +58,9 @@ class SimpleSelect extends React.Component {
               />
             }
           >
-            <MenuItem value={10}>180 Londale Street</MenuItem>
+            <MenuItem value={10}>180 Lonsdale Street</MenuItem>
             <MenuItem value={20}>242 Exhibition Street</MenuItem>
-            <MenuItem value={30}>150 Londale Street</MenuItem>
+            <MenuItem value={30}>150 Lonsdale Street</MenuItem>
           </Select>
         </FormControl>
       </form>

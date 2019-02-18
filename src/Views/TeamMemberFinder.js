@@ -183,7 +183,7 @@ class TeamMemberFinder extends Component {
           {filteredData.map(item => (
             <div key={item.name}>
               <div>
-                {item.location === "Office" && <Button label={item.name} component={Link} to="/PersonMap" />}
+                {item.location === "Office" && <Button label={item.name} component={Link} to="/FindOffice" />}
               </div>
             </div>
           ))}
