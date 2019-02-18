@@ -8,14 +8,18 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
+import "./dropdown.css";
+
 const styles = theme => ({
   root: {
     display: "block",
-    borderRadius: "100px"
+    borderRadius: "100px",
+    borderColor: "#ffffff"
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 125
+    minWidth: 125,
+    borderColor: '#ffffff'
   },
   selectEmpty: {
     marginTop: theme.spacing.unit
@@ -40,7 +44,6 @@ class SimpleSelect extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <form className={classes.root} autoComplete="off">
         <FormControl variant="filled" className={classes.formControl}>
           <InputLabel
             ref={ref => {
@@ -68,7 +71,6 @@ class SimpleSelect extends React.Component {
             <MenuItem value={30}>NT</MenuItem>
           </Select>
         </FormControl>
-      </form>
     );
   }
 }

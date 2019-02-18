@@ -25,16 +25,16 @@ class SetDefaultLocation extends Component {
           <br />
         </center>
         <center>
-          State
+          <h3>State</h3>
           <Dropdown/>
-          Building
+          <h3>Building</h3>
           <DropdownB />
-          Floor
+          <h3>Floor</h3>
           <DropdownF />
-        </center>
-        <p align="right" style={{ marginRight: "400px" }}>
+          <div style={{ margin: '10px' }}>
             <Button label="Save Location" component={Link} to="/InOffice"/>
-        </p>
+            </div>
+        </center>
       </div>
     );
   }

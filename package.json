@@ -7,6 +7,7 @@
   "dependencies": {
     "@material-ui/core": "3.9.1",
     "@material-ui/icons": "3.0.2",
+    "braces": "^2.3.2",
     "chart.js": "2.7.3",
     "informed": "1.10.12",
     "material-ui": "0.20.2",
@@ -20,7 +21,7 @@
     "react-router": "4.3.1",
     "react-router-dom": "4.3.1",
     "react-router-native": "4.3.0",
-    "react-scripts": "^2.1.5",
+    "react-scripts": "*",
     "react-search-input": "0.11.3",
     "semantic-ui-react": "0.84.0",
     "set-default-browser": "^1.0.1"
