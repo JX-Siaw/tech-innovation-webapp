@@ -21,11 +21,13 @@ class Locations extends Component {
           <br />
           <h1> Where are you working today?</h1>
           <br />
-            <Button component={Link} to="/InOffice" label="Office" />
+            <Button component={Link} to="/SetDefaultLocation" label="Office" />
           <br />
             <Button label="Home" component={Link} to="/LoggedHome" />
           <br />
             <Button label="Out of office" component={Link} to="/OnSite" />
+            <br/>
+            <Button label="Leave" component={Link} to="/LoggedHome" />
         </center>
       </div>
     );

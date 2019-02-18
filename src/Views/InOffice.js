@@ -7,8 +7,31 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Paper from '@material-ui/core/Paper';
+import Draggable from 'react-draggable';
+import { Link } from "react-router-dom";
+
+function PaperComponent(props) {
+  return (
+    <Draggable>
+      <Paper {...props} />
+    </Draggable>
+  );
+}
+
+
 class AtOffice extends Component {
-  
+  state = {
+    open: false,
+  };
+
+  handleClickOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
   render() {
     return (
       <div
@@ -36,6 +59,7 @@ class AtOffice extends Component {
                         height: "100%"
             }}>
               <Bubble
+                click={this.handleClickOpen}
                 id="1"
                 colour="grey"
                 hovercol our="#3f51b5"
@@ -45,6 +69,7 @@ class AtOffice extends Component {
                 top="6.2%"
                 />
               <Bubble
+                click={this.handleClickOpen}
                 id="2"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -54,6 +79,7 @@ class AtOffice extends Component {
                 top="6.2%"
               />
               <Bubble
+                click={this.handleClickOpen}
                 id="3"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -63,6 +89,7 @@ class AtOffice extends Component {
                 top="6.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="4"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -72,6 +99,7 @@ class AtOffice extends Component {
                 top="6.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="5"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -81,6 +109,7 @@ class AtOffice extends Component {
                 top="6.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="6"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -90,6 +119,7 @@ class AtOffice extends Component {
                 top="15%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="7"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -99,6 +129,7 @@ class AtOffice extends Component {
                 top="15%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="8"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -108,6 +139,7 @@ class AtOffice extends Component {
                 top="17%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="9"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -117,6 +149,7 @@ class AtOffice extends Component {
                 top="15%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="10"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -126,6 +159,7 @@ class AtOffice extends Component {
                 top="15%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="11"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -135,6 +169,7 @@ class AtOffice extends Component {
                 top="15%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="12"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -144,6 +179,7 @@ class AtOffice extends Component {
                 top="27%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="13"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -153,6 +189,7 @@ class AtOffice extends Component {
                 top="27%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="14"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -162,6 +199,7 @@ class AtOffice extends Component {
                 top="43%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="15"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -171,6 +209,7 @@ class AtOffice extends Component {
                 top="44%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="16"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -180,6 +219,7 @@ class AtOffice extends Component {
                 top="53%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="17"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -189,6 +229,7 @@ class AtOffice extends Component {
                 top="53%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="18"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -198,6 +239,7 @@ class AtOffice extends Component {
                 top="53%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="19"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -207,6 +249,7 @@ class AtOffice extends Component {
                 top="60%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="20"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -216,6 +259,7 @@ class AtOffice extends Component {
                 top="60%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="21"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -225,6 +269,7 @@ class AtOffice extends Component {
                 top="60%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="22"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -234,6 +279,7 @@ class AtOffice extends Component {
                 top="70.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="23"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -243,6 +289,7 @@ class AtOffice extends Component {
                 top="70.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="24"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -252,6 +299,7 @@ class AtOffice extends Component {
                 top="75.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="25"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -261,6 +309,7 @@ class AtOffice extends Component {
                 top="72.2%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="26"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -270,6 +319,7 @@ class AtOffice extends Component {
                 top="71%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="27"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -279,6 +329,7 @@ class AtOffice extends Component {
                 top="79%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="28"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -288,6 +339,7 @@ class AtOffice extends Component {
                 top="79%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="29"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -297,6 +349,7 @@ class AtOffice extends Component {
                 top="80%"
               />
               <Bubble
+              click={this.handleClickOpen}
                 id="30"
                 colour="grey"
                 hovercolour="#3f51b5"
@@ -305,6 +358,27 @@ class AtOffice extends Component {
                 left="85%"
                 top="78%"
               />
+              <Dialog
+          open={this.state.open}
+          onClose={this.handleClose}
+          PaperComponent={PaperComponent}
+          aria-labelledby="draggable-dialog-title"
+        >
+          <DialogTitle id="draggable-dialog-title">Set as defualt location</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Do you wish to set this as your default location? You can change your defualt location in Options.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button component={Link} to="/LoggedOffice" color="primary">
+              No
+            </Button>
+            <Button component={Link} to="/LoggedOffice"  color="primary">
+              Yes
+            </Button>
+          </DialogActions>
+        </Dialog>
               <img
                 src={floorplan}
                 alt=""

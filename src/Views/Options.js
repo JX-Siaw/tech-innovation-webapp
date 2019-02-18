@@ -33,9 +33,9 @@ class Options extends Component {
     const isLoggedIn = this.state.isLoggedIn;
      let button;
      if (isLoggedIn) {
-      button = <Button click={this.handleLogoutClick} style={{padding:"20px"}} label="Hi"/>;
+      button = <Button click={this.handleLogoutClick} style={{padding:"20px"}} label="Notificatons: On"/>;
     } else {
-      button = <Button click={this.handleLoginClick} style={{padding:"20px"}} label ="Hello"/>;
+      button = <Button click={this.handleLoginClick} style={{padding:"20px"}} label ="Notifications: Off"/>;
     }
 
     return (

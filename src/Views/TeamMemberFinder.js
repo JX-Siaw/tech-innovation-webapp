@@ -8,6 +8,7 @@ import OfficeIcon from 'react-icons/lib/fa/building';
 import OnSiteIcon from 'react-icons/lib/fa/automobile';
 import LeaveIcon from 'react-icons/lib/fa/user-times';
 import { Link } from "react-router-dom";
+import Tooltip from '@material-ui/core/Tooltip';
 
 
 const style = {
@@ -31,6 +32,21 @@ const rowstyle = {
 };
 
 class TeamMemberFinder extends Component {
+
+  state = {
+    open: false,
+  };
+
+  handleTooltipClose = () => {
+    this.setState({ open: false });
+  };
+
+  handleTooltipOpen = () => {
+    this.setState({ open: true });
+  };
+
+
+
   state = {
     filter: "",
     data: [
@@ -132,8 +148,8 @@ class TeamMemberFinder extends Component {
       (
       <div>
       <div style={{display:"flex"}}>
+      <HomeIcon size={55} style={{color:"white",paddingRight:"20px"}}/>
       <h2>Home</h2>
-      <HomeIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
       </div>
         <Row style={rowstyle} >
           {filteredData.map(item => (
@@ -156,8 +172,8 @@ class TeamMemberFinder extends Component {
       (
         <div>
         <div style={{display:"flex"}}>
+        <OfficeIcon size={55} style={{color:"white",paddingRight:"20px"}}/>
         <h2>Office</h2>
-        <OfficeIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
         </div>
         <Row style={rowstyle} >
           {filteredData.map(item => (
@@ -180,14 +196,16 @@ class TeamMemberFinder extends Component {
       (
         <div>
         <div style={{display:"flex", justifycontent: "spacebetween" }}>
+        <OnSiteIcon size={55} style={{color:"white",paddingRight:"20px"}}/>
         <h2>Out of office</h2>
-        <OnSiteIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
         </div>
         <Row style={rowstyle} >
           {filteredData.map(item => (
             <div key={item.name}>
               <div>
+
                 {item.location === "OnSite" && <Button label={item.name} />}
+
               </div>
             </div>
           ))}
@@ -203,8 +221,9 @@ class TeamMemberFinder extends Component {
       (
         <div>
         <div style={{display:"flex"}}>
+        <LeaveIcon size={55} style={{color:"white",paddingRight:"20px"}}/>
         <h2>Leave</h2>
-        <LeaveIcon size={55} style={{color:"white",paddingLeft:"20px"}}/>
+
         </div>
         <Row style={rowstyle} >
           {filteredData.map(item => (
