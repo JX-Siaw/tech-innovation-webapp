@@ -67,6 +67,10 @@ class TeamMemberFinder extends Component {
         location: "Office"
       },
       {
+        name: "James Joschko",
+        location: "Office"
+      },
+      {
         name: "Jacky Li",
         location: "Home"
       },
@@ -179,7 +183,7 @@ class TeamMemberFinder extends Component {
           {filteredData.map(item => (
             <div key={item.name}>
               <div>
-                {item.location === "Office" && <Button label={item.name} component={Link} to="/InOffice" />}
+                {item.location === "Office" && <Button label={item.name} component={Link} to="/PersonMap" />}
               </div>
             </div>
           ))}

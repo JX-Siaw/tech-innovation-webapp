@@ -17,11 +17,11 @@ const styles = {
 
 export default props => (
   <Grid container>
-    <Grid item sm xs={6}>
+    <Grid item xs={6}>
       <Chart1 styles={styles} />
       <Chart2 styles={styles} />
     </Grid>
-    <Grid item sm xs={6}>
+    <Grid item xs={6}>
       <Chart3 styles={styles} />
       <Chart4 styles={styles} />
     </Grid>

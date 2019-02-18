@@ -1,26 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import LocationButton from "../Components/Button/locationbutton";
 import pinpointLogo from "../Assets/Pictures/Pinpoint-logo.png";
 import Snack from "../Components/SnackBar/snack";
 
-class LoggedOffice extends Component {
+class LoggedHome extends Component {
   render() {
     return (
       <div
-        style={{
-          backgroundImage: "url(" + myImage + ")",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          height: "100vh"
-        }}
       >
         <div align="right" style={{ marginRight: "30px" }}>
           <LocationButton
-            label="Location: L5, 242 Exhibition St, VIC"
+            label="Location: Leave"
             onClick={this.toggleData}
           />
         </div>
@@ -34,8 +26,8 @@ class LoggedOffice extends Component {
           <div>
           <img
             className='pull-right'
-            alt=""
             src={pinpointLogo}
+            alt=""
             style={{
               height: 80,
               width: 65,
@@ -55,4 +47,4 @@ class LoggedOffice extends Component {
   }
 }
 
-export default LoggedOffice;
+export default LoggedHome;

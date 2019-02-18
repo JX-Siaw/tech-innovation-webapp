@@ -20,7 +20,7 @@ function PaperComponent(props) {
 }
 
 
-class AtOffice extends Component {
+class PersonMap extends Component {
   state = {
     open: false,
   };
@@ -402,4 +402,4 @@ class AtOffice extends Component {
   }
 }
 
-export default AtOffice;
+export default PersonMap;
