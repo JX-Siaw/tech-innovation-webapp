@@ -33,6 +33,14 @@ h2 {
  font-size: 1.5em;
 }
 
+h3 {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: TelstraAkkurat;
+    font-size: 1em;
+   }
+
 span {
  font-family: gravur;
 }
