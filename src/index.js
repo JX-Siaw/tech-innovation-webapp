@@ -20,6 +20,7 @@ import LoggedHome from "./Views/LoggedHome";
 import LoggedOffice from "./Views/LoggedOffice";
 import LoggedOnSite from "./Views/LoggedOnSite";
 import PersonMap from "./Views/PersonMap";
+import FindOffice from "./Views/FindOffice";
 
 import IndividualLocation from "./Views/IndividualLocation";
 
@@ -88,6 +89,7 @@ class App extends Component {
           <Route path="/LoggedOffice" component={LoggedOffice}/>
           <Route path="/LoggedOnSite" component={LoggedOnSite}/>
           <Route path="/PersonMap" component={PersonMap}/>
+          <Route path="/FindOffice" component={FindOffice}/>
         </Switch>
       </div>
     );
