@@ -19,6 +19,7 @@ import SetDefaultLocation from "./Views/SetDefaultLocation";
 import LoggedHome from "./Views/LoggedHome";
 import LoggedOffice from "./Views/LoggedOffice";
 import LoggedOnSite from "./Views/LoggedOnSite";
+import PersonMap from "./Views/PersonMap";
 
 import IndividualLocation from "./Views/IndividualLocation";
 
@@ -49,7 +50,7 @@ class App extends Component {
         backgroundRepeat: "no-repeat",
         height: '100vh'
       }}>
-      
+
         <CssBaseline />
         <Drawer
           open={this.state.drawerIsOpen}
@@ -86,6 +87,7 @@ class App extends Component {
           <Route path="/LoggedHome" component={LoggedHome}/>
           <Route path="/LoggedOffice" component={LoggedOffice}/>
           <Route path="/LoggedOnSite" component={LoggedOnSite}/>
+          <Route path="/PersonMap" component={PersonMap}/>
         </Switch>
       </div>
     );
